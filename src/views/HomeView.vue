@@ -5,11 +5,9 @@
     <p>{{ $route.name }}</p>
     <button class="btn btn-primary" @click="goAboutPage">about 으로 이동</button>
     <hr class="my-4" />
-    <div class="row g-3">
-      <div v-for="(item, index) in items" :key="index" class="col-4">
-        <AppCard>{{ item }}</AppCard>
-      </div>
-    </div>
+    <AppGrid :items="items" v-slot="{ item }" col-class="col-3">
+      <AppCard>{{ item }}</AppCard>
+    </AppGrid>
   </div>
 </template>
 
@@ -17,6 +15,7 @@
 import { useRoute, useRouter } from 'vue-router'
 import { ref } from 'vue'
 import AppCard from '@/components/AppCard.vue'
+import AppGrid from '@/components/AppGrid.vue'
 
 const route = useRoute()
 const router = useRouter()

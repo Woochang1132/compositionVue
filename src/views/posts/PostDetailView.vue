@@ -28,7 +28,7 @@
 <script setup>
 import { useRouter } from 'vue-router'
 import { deletePost, getPostById } from '@/api/posts'
-import { ref, defineProps } from 'vue'
+import { ref } from 'vue'
 
 const props = defineProps({
   id: [String, Number]

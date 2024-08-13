@@ -9,7 +9,6 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
 import AppCard from '../AppCard.vue'
 
 defineProps({
